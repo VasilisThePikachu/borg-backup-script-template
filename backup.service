@@ -1,0 +1,12 @@
+# /etc/systemd/system/backup.service
+
+[Unit]
+Description=A system backup
+After=network.target
+
+[Service]
+ExecStart=/Location/to/backup.sh
+WorkingDirectory=/Location/to/
+
+[Install]
+WantedBy=default.target

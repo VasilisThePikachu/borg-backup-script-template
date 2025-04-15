@@ -1,0 +1,11 @@
+# /etc/systemd/system/backup.timer
+
+[Unit]
+Description=Run a backup every day
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
